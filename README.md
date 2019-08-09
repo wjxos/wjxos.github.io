@@ -1,4 +1,4 @@
-# wjxos.github.io 读书笔记
+# WJXOS 读书笔记
 为了记录学习的过程，便于复习，作者整理了markdown语法
 
 ## 目录
