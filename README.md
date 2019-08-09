@@ -9,6 +9,10 @@
     - [基础](#基础)
     
     
+- [Gateway](#网关)
+    - [限流](#限流)
+    
+    
  
  
  
@@ -34,3 +38,7 @@
  **Java**
  
  **基础**
+ 
+ 
+**Gateway**
+* [限流](docs/gateway/current-limiting.md)
