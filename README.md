@@ -7,7 +7,7 @@
     - [Markdown入门体验](#Markdown入门体验)
 - [Java](#Java)
     - [基础](#基础)
-    
+    - [Java8](#Java8)
     
 - [Gateway](#网关)
     - [限流](#限流)
@@ -32,13 +32,14 @@
  
  
  
- **Markdown语法基础**
- * [Markdown入门体验](docs/markdown/markdown.md)
+**Markdown语法基础**
+* [Markdown入门体验](docs/markdown/markdown.md)
  
- **Java**
+**Java**
  
- **基础**
- 
+**基础**
+**Java8**
+ * [Java 8 的新特性](docs/java8/interfaces.md)
  
 **Gateway**
 * [限流](docs/gateway/current-limiting.md)
