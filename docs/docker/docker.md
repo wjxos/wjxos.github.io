@@ -11,6 +11,9 @@
 
 - [docker镜像](#docker镜像)    
     - [启动守护式容器](#启动守护式容器)   
+- [容器数据卷](#容器数据卷) 
+    - [什么是容器数据卷](#什么是容器数据卷)   
+    - [添加容器数据卷](#添加容器数据卷)   
     
 * **docker常用操作**
 * help
@@ -46,6 +49,8 @@ docker run -it centos
 -d //后台运行容器，并返回容器的id，也即启动守护式容器
 -i //已交互模式运行容器，通常与-t同时使用
 -t //为容器分配一个伪输入终端，通常与-i同时使用
+-p //主机端口：docker容器端口
+-P //随机分配端口
 docker ps //查询容器
 docker -l // 查看之前运行过的容器
 docker -a
@@ -58,6 +63,9 @@ docker stop [容器名称能]  或者  [容器ID]
 docker kill [容器ID] //强制停止
 docker rm -f // 强制删除容器
 docker rm -f $(docker ps -q) //批量删除容器
+//提交正在运行的容器成为一个新的镜像
+docker commit -a="作者" -m="描述" docker容器ID 包名/新镜像名:版本号
+
 ```
 
 **重点--docker交互模式** 
@@ -84,11 +92,16 @@ docker logs -t -f --tail 3 934e67b7a72f //实时追加日志
 docker cp 容器ID:容器内的路径 目的主机的路径
 ```
 
+* **容器数据卷**
+* 什么是容器数据卷
 
+将运行的数据持久化，容器之间数据共享
 
-
-
-
+* 添加容器数据卷
+```jshelllanguage
+docker run -it -v /宿主机绝对路径目录:/容器内目录 镜像名
+docker run -it -v /myDataVolume:/dataVolumeContainer 镜像名 
+```
 
 
 
