@@ -30,6 +30,7 @@ docker run [OPTIONS]
 docker run -it centos
 //参数解释
 --name="容器的名称" //为容器制定一个名字
+-d //后台运行容器，并返回容器的id，也即启动守护式容器
 -i //已交互模式运行容器，通常与-t同时使用
 -t //为容器分配一个伪输入终端，通常与-i同时使用
 docker ps //查询容器
@@ -46,9 +47,24 @@ docker rm -f // 强制删除容器
 docker rm -f $(docker ps -q) //批量删除容器
 ```
 
-
-
-
+**重点** 
+* 启动交互式容器
+```jshelllanguage
+docker run -it --name test centos
+```
+* 启动守护式容器
+```jshelllanguage
+docker run -d --name test centos// 当容器中没有运行任何程序时，会自动停掉
+//启动一个容器，守护模式，每隔2秒钟打印hello wjx
+docker run -d centos /bin/sh -c "while true;do echo hello wjx; sleep 2; done"
+docker logs -t 934e67b7a72f //查看容器的日志
+docker logs -t -f --tail 3 934e67b7a72f //实时追加日志
+```
+**进入容器** 
+```jshelllanguage
+1. attach 容器id
+2. exec 进入容器并执行一段命令返回给宿主机
+```
 
 
 
