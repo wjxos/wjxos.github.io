@@ -1,8 +1,8 @@
 # 虚拟化技术 -- docker
 
 - [docker 常用操作](#docker常用操作)
-    - [docker help](#docker help)
-    - [docker 镜像的常用命令](#docker镜像的常用命令)
+    - [help](#docker--help)
+    - [docker镜像的常用命令](#docker镜像的常用命令)
     - [docker容器的常用命令](#docker容器的常用命令)
 - [重点--docker交互模式](#重点--docker交互模式)
     - [启动交互式容器](#启动交互式容器)    
@@ -13,7 +13,7 @@
     - [启动守护式容器](#启动守护式容器)   
     
 * **docker常用操作**
-* docker help
+* help
 ```
 //docker 版本
 docker version
