@@ -1,5 +1,18 @@
 # 虚拟化技术 -- docker
 
+- [docker 常用操作](#docker常用操作)
+    - [docker help](#docker help)
+    - [docker 镜像的常用命令](#docker镜像的常用命令)
+    - [docker容器的常用命令](#docker容器的常用命令)
+- [重点--docker交互模式](#重点--docker交互模式)
+    - [启动交互式容器](#启动交互式容器)    
+    - [启动守护式容器](#启动守护式容器)
+- [进入容器](#进入容器)
+
+- [docker镜像](#docker镜像)    
+    - [启动守护式容器](#启动守护式容器)   
+    
+* **docker常用操作**
 * docker help
 ```
 //docker 版本
@@ -8,7 +21,7 @@ docker version
 docker info 
 docker [OPTIONS] COMMAND
 ```
-* docker 镜像的常用命令
+* docker镜像的常用命令
 ```java
 docker images
 docker images -a 
@@ -24,7 +37,7 @@ docker rmi -f tomcat nginx  //删除多个镜像
 docker rmi -f $(docker -q)  //组合命令，批量删除
 docker push
 ```
-* docker 容器的常用命令
+* docker容器的常用命令
 ```java
 docker run [OPTIONS]
 docker run -it centos
@@ -47,7 +60,7 @@ docker rm -f // 强制删除容器
 docker rm -f $(docker ps -q) //批量删除容器
 ```
 
-**重点** 
+**重点--docker交互模式** 
 * 启动交互式容器
 ```jshelllanguage
 docker run -it --name test centos
@@ -64,6 +77,11 @@ docker logs -t -f --tail 3 934e67b7a72f //实时追加日志
 ```jshelllanguage
 1. attach 容器id
 2. exec 进入容器并执行一段命令返回给宿主机
+```
+
+* 文件拷贝
+```jshelllanguage
+docker cp 容器ID:容器内的路径 目的主机的路径
 ```
 
 
