@@ -101,6 +101,10 @@ docker cp 容器ID:容器内的路径 目的主机的路径
 ```jshelllanguage
 docker run -it -v /宿主机绝对路径目录:/容器内目录 镜像名
 docker run -it -v /myDataVolume:/dataVolumeContainer 镜像名 
+//查看是否生效
+docker inspect 容器ID
+//添加权限 只读(ro) 容器内只能对宿主机的文件进行读，不能写操作
+docker run -it -v /myDataVolume:/dataVolumeContainer: ro 镜像名
 ```
 
 
