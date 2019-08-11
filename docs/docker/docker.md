@@ -18,6 +18,7 @@
     - [什么是Dockerfile](#什么是Dockerfile) 
     - [helloworld](#helloworld)  
     - [Dockerfile构建](#Dockerfile构建)  
+    - [Dockerfile案例](#Dockerfile案例) 
     
 * **docker常用操作**
 * help
@@ -153,8 +154,10 @@ COPY //只有copy 类似ADD
 VOLUME //容器数据卷，用于保存和持久化工作
 CMD //容器启动命令，Dockerfile中可以有多个CMD指令但只有最后一个生效，CMD会被docker run 之后的参数替换
 ENTRYPOINT //容器启动时的命令，ENTRYPOINT的目的和CMD一样，都是指定容器程序及参数
+ONBUILD //当构建一个被继承的Dockerfile是运行命令，父镜像在被子镜像继承后，父镜像的onbuild被触发
 ```
 
+* **Dockerfile案例**
 
 
 
