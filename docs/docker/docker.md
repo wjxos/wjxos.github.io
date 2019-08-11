@@ -15,7 +15,9 @@
     - [什么是容器数据卷](#什么是容器数据卷)   
     - [添加容器数据卷](#添加容器数据卷)   
 - [DockerFile](#DockerFile) 
+    - [什么是Dockerfile](#什么是Dockerfile) 
     - [helloworld](#helloworld)  
+    - [Dockerfile构建](#Dockerfile构建)  
     
 * **docker常用操作**
 * help
@@ -109,9 +111,19 @@ docker inspect 容器ID
 docker run -it -v /myDataVolume:/dataVolumeContainer: ro 镜像名
 ```
 
-* **DockerFile**
-* helloworld
+**DockerFile**
+* 什么是Dockerfile
+Dockerfile 使用来构建docker镜像的文件
+1. 编写Dockerfile
+2. docker build
+3. docker run
+```jshelllanguage
+FROM scratch //抓取源镜像 scratch相当于java中的Objec
+```
 
+
+
+* helloworld
 1. vim Dockerfile
 ```jshelllanguage
 # volume test
@@ -127,6 +139,22 @@ docker build -f /路径/Dockerfile -t 包名/镜像名 .
 docker run -it 包名/镜像名
 docker inspect //查看执行结果
 ```
+* Dockerfile构建
+1. 保留字指令
+```jshelllanguage
+FROM //基础镜像，当前新镜像给予那个镜像的
+MAINTAINER //镜像维护者的姓名和邮箱
+RUN //容器构建时需要运行的命令
+EXPOSE //当前容器对外暴露端口 
+WORKDIR //指定创建容器后，终端默认登录进来的工作目录，一个落脚点
+ENV //用来构建镜像过程中设置环境变量 如：ENV MY_PATH /usr/mytest 被引用：WORKDIR $MY_PATHA
+ADD //COPY + 解压
+COPY //只有copy 类似ADD
+VOLUME //容器数据卷，用于保存和持久化工作
+CMD //容器启动命令，Dockerfile中可以有多个CMD指令但只有最后一个生效，CMD会被docker run 之后的参数替换
+ENTRYPOINT //容器启动时的命令，ENTRYPOINT的目的和CMD一样，都是指定容器程序及参数
+```
+
 
 
 
