@@ -14,6 +14,8 @@
 - [容器数据卷](#容器数据卷) 
     - [什么是容器数据卷](#什么是容器数据卷)   
     - [添加容器数据卷](#添加容器数据卷)   
+- [DockerFile](#DockerFile) 
+    - [helloworld](#helloworld)  
     
 * **docker常用操作**
 * help
@@ -107,8 +109,24 @@ docker inspect 容器ID
 docker run -it -v /myDataVolume:/dataVolumeContainer: ro 镜像名
 ```
 
+* **DockerFile**
+* helloworld
 
+1. vim Dockerfile
+```jshelllanguage
+# volume test
+FROM centos
+VOLUME ["/dataVolumeCentainer1","/dataVolumeCentainer2"]
+CMD echo "finished,---------------- success1"
+CMD /bin/bash
+```
 
+2. docker build
+```jshelllanguage
+docker build -f /路径/Dockerfile -t 包名/镜像名 .
+docker run -it 包名/镜像名
+docker inspect //查看执行结果
+```
 
 
 
