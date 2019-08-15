@@ -171,9 +171,9 @@ mysql> select 1.0*count(distinct left(name,5))/count(*) from test;
 +-------------------------------------------+
 1 row in set (0.00 sec)
 ```
-其中left函数为字符串截取函数。
+其中`left`函数为字符串截取函数。
 
-select 1.0*count(distinct name)/count(*) from test这是比较整个name的重复率，当时这是最好的情况。然后分别截取name字符的前几个字母，最后选取的计算值要接近整个取整个name时得出的计算值，然后再选中占用空间小的。由上面执行的结果可知应选中name的前4个字母作为索引最为适合
+`select 1.0*count(distinct name)/count(*) from test`这是比较整个`name`的重复率，当时这是最好的情况。然后分别截取name字符的前几个字母，最后选取的计算值要接近整个取整个`name`时得出的计算值，然后再选中占用空间小的。由上面执行的结果可知应选中`name`的前4个字母作为索引最为适合
 ```sql
 mysql> alter table test add key(name(4));
 Query OK, 4 rows affected (0.15 sec)
