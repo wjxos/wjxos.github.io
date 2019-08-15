@@ -20,8 +20,9 @@
 - [SpringBoot与Spring家族](#SpringBoot与Spring家族)
     - [SpringBoot](#SpringBoot) 
     - [SpringCloud](#SpringCloud) 
- 
-- [mysql](docs/mysql/mysql.md)
+
+- [mysql基础篇](docs/mysql/basic.md) 
+- [mysql索引篇](docs/mysql/mysql.md)
 
 **Markdown语法基础**
 
