@@ -11,6 +11,7 @@
     
 - [虚拟化技术](#虚拟化技术)
     - [docker](#docker)
+    - [kubernetes](#kubernetes)
     
 - [SpringBoot与Kubernetes](#SpringBoot与Kubernetes)
     - [SpringBoot与Kubernetes](#docker)
@@ -97,6 +98,7 @@ public static Integer valueOf(int i) {
 
 **虚拟化技术**
 * [docker](docs/docker/docker.md)
+* [kubernetes](docs/docker/kubernetes.md)
 
 **SpringBoot与Kubernetes**
 * [SpringBoot与Kubernetes](docs/springbootAndKubernetes/springbootAndKubernetes.md)
