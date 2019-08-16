@@ -15,3 +15,6 @@
 * web 界面（ux）：用户可以通过 web 界面操作 Kubernetes。
 * 命令行操作（cli）：kubecfg命令。
 
+
+
+[参考资料](https://www.cnblogs.com/craigtaylor/archive/2019/06/04/10971231.html)
