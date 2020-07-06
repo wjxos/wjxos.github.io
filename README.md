@@ -114,3 +114,5 @@ public static Integer valueOf(int i) {
 
 [xxl-job](http://www.xuxueli.com/page/projects.html)
 
+[记一次java程序CPU占用过高问题排查](https://blog.csdn.net/puhaiyang/article/details/78663942)
+
